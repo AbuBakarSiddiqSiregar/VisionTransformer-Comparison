@@ -1,0 +1,2 @@
+model_name,total_params,trainable_params,non_trainable_params,model_size_mb,best_val_acc,test_loss,test_acc,avg_inference_ms,throughput_img_per_s,num_test_inference,total_inference_time_s
+deit_tiny_patch16_224,5525381,5525381,0,21.077655792236328,0.9856115107913669,0.06989167229769798,0.978494623655914,36.79730143369275,27.175905869129004,279,10.266447100000278
