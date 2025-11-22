@@ -29,20 +29,28 @@ EksplorasiVT/
 │   ├─ 0001.jpg
 │   ├─ 0002.jpg
 │   └─ ...
-│
+├─ jawaban_klasifikasi.csv
 ├─ train.csv
 ├─ val.csv
 ├─ test.csv
+├─ uji_coba.csv
 │
-├─ train_vit_food.py
-├─ lihat_history.py
-├─ inference_klasifikasi.py
-└─ (file hasil training)
-    ├─ checkpoints/
-    │   ├─ vit_tiny_best.pth
-    │   └─ deit_tiny_best.pth
-    ├─ vit_tiny_history.npy
-    └─ deit_tiny_history.npy
+├─ review_history.ipynb
+├─ inference_klasifikasi.ipynb
+├─ train_model.ipynb
+│
+│  (file hasil training)
+├─ checkpoints/
+│   ├─ vit_tiny_best.pth
+│   └─ deit_tiny_best.pth
+├─ deit_tiny_summary.csv
+├─ deit_tiny_history.npy
+├─ deit_tiny_classification_report.txt
+├─ deit_tiny_confusion_matrix.png
+├─ vit_tiny_history.npy
+├─ vit_tiny_classification_report.txt
+├─ vit_tiny_confusion_matrix.png
+└─ vit_tiny_summary.csv
 ```
 
 Format file CSV:
