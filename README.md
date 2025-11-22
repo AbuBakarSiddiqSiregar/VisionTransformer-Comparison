@@ -162,12 +162,15 @@ Script:
 
 ```python
 MODEL_NAME = "vit_tiny_patch16_224"
+# MODEL_NAME = "deit_tiny_patch16_224"   # hapus komentar untuk ganti model
+
 CHECKPOINT_PATH = "checkpoints/vit_tiny_best.pth"
+# CHECKPOINT_PATH = "checkpoints/deit_tiny_best.pth" # hapus komentar untuk ganti model
 
 DATA_DIR = "dataset"
-TEST_CSV = "test.csv"
+TEST_CSV = "uji_coba.csv"
 OUTPUT_CSV = "jawaban_klasifikasi.csv"
-KUNCI_JAWABAN_CSV = "kunci_jawaban.csv"
+KUNCI_JAWABAN_CSV = "test.csv"
 ```
 
 Format `kunci_jawaban.csv`:
