@@ -18,6 +18,149 @@ pada tugas klasifikasi 5 kelas makanan Indonesia:
 
 ---
 
+## Cara Menggunakan Model (Inference Langsung)
+
+### Langkah 0 – Download Dataset
+Karena ukuran dataset cukup besar, dataset tidak disertakan langsung dalam repository.
+
+Silakan download dataset melalui link berikut:  
+👉 https://drive.google.com/file/d/1pR7ul4iOmhXq06Fhwj4TsSibc49KxS5U/view?usp=drive_link
+
+File yang akan terunduh:
+```
+dataset.rar
+```
+
+Setelah selesai di-download:
+1. Pindahkan file `dataset.rar` ke dalam folder proyek:
+   ```
+   EksplorasiVT/dataset/
+   ```
+2. Klik kanan → **Extract Here**
+
+Pastikan setelah diekstrak, struktur folder menjadi seperti ini:
+
+```text
+EksplorasiVT/
+│
+├─ dataset/
+│   ├─ 0001.jpg
+│   ├─ 0002.jpg
+│   ├─ 0003.jpg
+│   └─ ...
+└─ ...
+```
+
+⚠️ Jangan sampai gambarnya berada di dalam subfolder tambahan seperti:
+```
+dataset/dataset/0001.jpg  ❌ (SALAH)
+```
+Yang benar:
+```
+dataset/0001.jpg ✅
+```
+
+---
+
+## Cara Menggunakan Model (Inference Langsung)
+
+### Langkah 1 – Persiapan file
+1. Download dan ekstrak seluruh file proyek ke dalam satu folder, misalnya:
+   ```
+   EksplorasiVT/
+   ```
+
+2. Pastikan struktur folder akhir seperti berikut:
+
+```text
+EksplorasiVT/
+│
+├─ dataset/
+│   ├─ 0001.jpg
+│   ├─ 0002.jpg
+│   ├─ 0003.jpg
+│   └─ ...
+│
+├─ inference_klasifikasi.ipynb
+├─ uji_coba.csv
+├─ test.csv
+└─ checkpoints/
+    ├─ vit_tiny_best.pth
+    └─ deit_tiny_best.pth
+```
+
+---
+
+### Langkah 2 – Menjalankan model
+1. Buka file:
+   ```
+   inference_klasifikasi.ipynb
+   ```
+
+2. Jalankan seluruh cell dari atas ke bawah.
+
+3. Model akan:
+   - Membaca daftar gambar dari `test.csv`
+   - Mengklasifikasikan gambar menggunakan model terpilih
+   - Menghasilkan file:
+     ```
+     jawaban_klasifikasi.csv
+     ```
+     yang berisi nama file dan label hasil prediksi.
+
+---
+
+## Mengubah Gambar yang Ingin Diklasifikasikan
+
+Untuk mengganti gambar uji:
+
+1. Edit file berikut:
+   - `uji_coba.csv`
+   - atau `test.csv`
+
+2. Pastikan format CSV seperti ini:
+```csv
+filename
+0001.jpg
+0002.jpg
+0003.jpg
+```
+
+3. Simpan, lalu jalankan kembali notebook `inference_klasifikasi.ipynb`.
+
+---
+
+## Mengganti Model yang Digunakan
+
+Secara default sistem menggunakan model ViT Tiny.
+
+Jika ingin menggunakan model DeiT Tiny, ubah bagian berikut di dalam notebook:
+
+```python
+MODEL_NAME = "vit_tiny_patch16_224"
+CHECKPOINT_PATH = "checkpoints/vit_tiny_best.pth"
+```
+
+menjadi:
+
+```python
+MODEL_NAME = "deit_tiny_patch16_224"
+CHECKPOINT_PATH = "checkpoints/deit_tiny_best.pth"
+```
+
+Kemudian jalankan ulang seluruh cell notebook.
+
+---
+
+## Catatan Penting
+
+- Pastikan nama file gambar di CSV **persis sama** dengan yang ada di folder `dataset/`.
+- Jangan mengubah struktur folder kecuali benar-benar paham path yang digunakan.
+- Jika model tidak bisa dimuat, pastikan file `.pth` ada di folder `checkpoints/`.
+
+---
+
+---
 ## 1. Struktur Folder
 
 Struktur minimal proyek:
