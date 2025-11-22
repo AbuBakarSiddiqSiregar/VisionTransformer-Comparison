@@ -1,0 +1,2 @@
+model_name,total_params,trainable_params,non_trainable_params,model_size_mb,best_val_acc,test_loss,test_acc,avg_inference_ms,throughput_img_per_s,num_test_inference,total_inference_time_s
+vit_tiny_patch16_224,5525381,5525381,0,21.077655792236328,0.9820143884892086,0.08213834138242879,0.985663082437276,48.889708602183426,20.45420250173755,279,13.640228700009175

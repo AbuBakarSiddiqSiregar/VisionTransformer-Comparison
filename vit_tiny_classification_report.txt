@@ -1,0 +1,11 @@
+              precision    recall  f1-score   support
+
+       bakso     0.9583    1.0000    0.9787        46
+   gado_gado     0.9839    1.0000    0.9919        61
+ nasi_goreng     0.9844    0.9844    0.9844        64
+     rendang     1.0000    0.9841    0.9920        63
+   soto_ayam     1.0000    0.9556    0.9773        45
+
+    accuracy                         0.9857       279
+   macro avg     0.9853    0.9848    0.9848       279
+weighted avg     0.9860    0.9857    0.9857       279
